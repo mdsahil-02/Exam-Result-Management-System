@@ -37,7 +37,7 @@ On some systems use `python3` instead of `python`.
 ## Menu
 
 ```
---- Exam Result Management System ---
+ Exam Result Management System 
 1. Add
 2. View all
 3. Rank list
