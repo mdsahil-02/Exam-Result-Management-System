@@ -109,3 +109,14 @@ def view_all():
         print(f"Roll: {s['roll']} | Name: {s['name']} | Maths: {s['maths']} | "
               f"Physics: {s['physics']} | Chemistry: {s['chemistry']} | "
               f"Total: {s['total']} | {s['percentage']:.2f}% | {s['result']}")
+
+def rank_list():
+    if len(students) == 0:
+        print("No records found.")
+        return
+    ranked = sorted(students, key=lambda s: s["total"], reverse=True)
+    rank = 1
+    for s in ranked:
+        print(f"Rank {rank} | {s['roll']} | {s['name']} | {s['total']} | "
+              f"{s['percentage']:.2f}% | {s['result']}")
+        rank += 1
