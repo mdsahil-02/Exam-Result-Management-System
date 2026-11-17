@@ -49,3 +49,17 @@ def load_records():
                 students.append(make_student(int(roll), name, int(m), int(p), int(c)))
     except FileNotFoundError:
         pass   # first run: file doesn't exist yet, that's fine
+
+# Core Function
+def make_student(roll, name, maths, physics, chemistry):
+    total = calculate_total(maths, physics, chemistry)
+    return {
+        "roll": roll,
+        "name": name,
+        "maths": maths,
+        "physics": physics,
+        "chemistry": chemistry,
+        "total": total,
+        "percentage": calculate_percentage(total),
+        "result": get_result(maths, physics, chemistry),
+    }
