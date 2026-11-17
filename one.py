@@ -17,3 +17,14 @@ def get_result(maths, physics, chemistry):
     if maths >= PASS_MARKS and physics >= PASS_MARKS and chemistry >= PASS_MARKS:
         return "Pass"
     return "Fail"
+
+# Validation Function
+def roll_exists(roll):
+    for s in students:
+        if s["roll"] == roll:
+            return True
+    return False
+
+
+def valid_marks(mark):
+    return 0 <= mark <= 100
