@@ -1,8 +1,4 @@
-# Summary: Exam Result Management System (PS No. 43)
-
-**University:** Rungta International Skills University
-**Program:** B.Tech Computer Science and Engineering
-**Language:** Python 3
+# Summary: Exam Result Management System 
 
 ## 1. Project Overview
 
@@ -57,25 +53,30 @@ All 4 test cases give the expected output.
 Add roll 101, Aman, marks 80, 70, 90.
 **Expected:** `Record added: 101 | Aman` and `Total: 240 | Percentage: 80.00% | Result: Pass`
 
-![Test Case 1]
+[Test Case 1]<img width="1560" height="1135" alt="Screenshot 2026-11-17 192004" src="https://github.com/user-attachments/assets/060b18a7-2b57-4da5-a8d7-77e1977db4f9" />
+
 
 ### Test Case 2: Boundary / Minimum Input
 Add roll 102, Riya, marks 40, 40, 40 (the pass limit).
 **Expected:** `Record added: 102 | Riya` and `Total: 120 | Percentage: 40.00% | Result: Pass`
 
-![Test Case 2]
+[Test Case 2]<img width="1557" height="1133" alt="Screenshot 2026-11-17 192210" src="https://github.com/user-attachments/assets/5298acd6-8837-4ad9-9624-79fbc4fc3991" />
+
 
 ### Test Case 3: Invalid Input
 (a) Add roll 101 when it already exists. **Expected:** `Roll number 101 already exists.`
 (b) Add roll 103, Ravi, marks 105, 60, 60. **Expected:** `Marks must be between 0 and 100.`
 
-![Test Case 3]
+[Test Case 3]<img width="1555" height="1130" alt="Screenshot 2026-11-17 192151" src="https://github.com/user-attachments/assets/5fa3c290-860f-4fe5-9f55-ce36bf87d5ba" />
+<img width="1526" height="1137" alt="Screenshot 2026-11-17 192227" src="https://github.com/user-attachments/assets/59f54bb9-564a-4c92-b170-41392278af80" />
+
 
 ### Test Case 4: Different Valid Scenario (Rank List)
 Records: 101 Aman (80, 70, 90), 102 Riya (40, 40, 40), 103 Karan (60, 60, 60). Then menu option 3.
 **Expected:** Rank 1 is 101 Aman 240, Rank 2 is 103 Karan 180, Rank 3 is 102 Riya 120.
 
-![Test Case 4]
+[Test Case 4]<img width="1567" height="1077" alt="Screenshot 2026-11-17 192725" src="https://github.com/user-attachments/assets/7374daba-4c50-4b95-a7b0-71ad537e9236" />
+
 
 ## 4. Conclusion
 
