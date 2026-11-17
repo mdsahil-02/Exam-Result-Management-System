@@ -63,3 +63,40 @@ def make_student(roll, name, maths, physics, chemistry):
         "percentage": calculate_percentage(total),
         "result": get_result(maths, physics, chemistry),
     }
+
+
+def add_student():
+    try:
+        roll = int(input("Enter roll number: "))
+    except ValueError:
+        print("Roll number must be a number.")
+        return
+
+    if roll_exists(roll):
+        print(f"Roll number {roll} already exists.")
+        return
+
+    name = input("Enter name: ").strip()
+    if name == "":
+        print("Name cannot be empty.")
+        return
+
+    try:
+        maths = int(input("Enter Maths marks: "))
+        physics = int(input("Enter Physics marks: "))
+        chemistry = int(input("Enter Chemistry marks: "))
+    except ValueError:
+        print("Marks must be numbers.")
+        return
+
+    if not (valid_marks(maths) and valid_marks(physics) and valid_marks(chemistry)):
+        print("Marks must be between 0 and 100.")
+        return
+
+    student = make_student(roll, name, maths, physics, chemistry)
+    students.append(student)
+    save_records()
+
+    print(f"Record added: {roll} | {name}")
+    print(f"Total: {student['total']} | Percentage: {student['percentage']:.2f}% "
+          f"| Result: {student['result']}")
