@@ -120,3 +120,29 @@ def rank_list():
         print(f"Rank {rank} | {s['roll']} | {s['name']} | {s['total']} | "
               f"{s['percentage']:.2f}% | {s['result']}")
         rank += 1
+
+# Main Menu
+def main():
+    load_records()
+    while True:
+        print("\n--- Exam Result Management System ---")
+        print("1. Add")
+        print("2. View all")
+        print("3. Rank list")
+        print("4. Exit")
+        choice = input("Enter choice: ").strip()
+
+        if choice == "1":
+            add_student()
+        elif choice == "2":
+            view_all()
+        elif choice == "3":
+            rank_list()
+        elif choice == "4":
+            print("Goodbye!")
+            break
+        else:
+            print("Invalid choice. Please enter 1, 2, 3 or 4.")
+
+
+main()
