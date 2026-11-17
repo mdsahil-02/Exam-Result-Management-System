@@ -100,3 +100,12 @@ def add_student():
     print(f"Record added: {roll} | {name}")
     print(f"Total: {student['total']} | Percentage: {student['percentage']:.2f}% "
           f"| Result: {student['result']}")
+
+def view_all():
+    if len(students) == 0:
+        print("No records found.")
+        return
+    for s in students:
+        print(f"Roll: {s['roll']} | Name: {s['name']} | Maths: {s['maths']} | "
+              f"Physics: {s['physics']} | Chemistry: {s['chemistry']} | "
+              f"Total: {s['total']} | {s['percentage']:.2f}% | {s['result']}")
